@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import FileUpload from './component/fileUpload';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
+  const [mode, setMode] = useState<'light' | 'dark'>('light');
+
+  const toggleMode = () => {
+    setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light'));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`app ${mode}`}>
+      <button onClick={toggleMode} className="mode-toggle">
+        Toggle to {mode === 'light' ? 'Dark' : 'Light'} Mode
+      </button>
+      <FileUpload mode={mode} />
     </div>
   );
-}
+};
 
 export default App;

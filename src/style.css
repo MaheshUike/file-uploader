@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  .app {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .mode-toggle {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .file-upload {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .file-upload.light {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .file-upload.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .upload-header h3 {
+    margin: 0;
+  }
+  
+  .upload-body {
+    margin-top: 20px;
+  }
+  
+  .file-input {
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  .file-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .file-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .file-name {
+    font-weight: bold;
+  }
+  
+  .file-size {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .file-status {
+    margin-left: 10px;
+  }
+  
+  .file-status.Uploading {
+    color: #007bff;
+  }
+  
+  .file-status.Uploaded {
+    color: #28a745;
+  }
+  
+  .file-status.Error {
+    color: #dc3545;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+  }
